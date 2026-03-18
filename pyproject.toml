@@ -1,0 +1,13 @@
+[project]
+name = "safeguard-ai-internal"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.135.1", # GET, POST, DELETE, PUT (Rest end-point)
+    "pydantic>=2.12.5", # TBD
+    "python-dotenv>=1.2.2", # TBD
+    "sqlalchemy>=2.0.48", # DB
+    "uvicorn>=0.42.0", # Sever (auto update when debug is true)
+]
