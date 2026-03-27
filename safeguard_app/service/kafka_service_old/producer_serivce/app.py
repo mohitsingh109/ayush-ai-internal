@@ -2,7 +2,7 @@ from kafka import KafkaProducer
 import random
 import json
 
-producer = KafkaProducer(bootstrap_servers='localhost:9092', retries=5) # connection with broker
+producer = KafkaProducer(bootstrap_servers='localhost:9092', retries=5, acks="all") # connection with broker
 
 for _ in range(100):
     symbols = ["AAPL", "MSFT", "GOOGL", "AMZN"]
@@ -20,7 +20,7 @@ for _ in range(100):
 
     json_str = json.dumps(record)
     json_str = json_str.encode("utf-8")
-    producer.send('stock_values', json_str) # Async call
+    producer.send('stock_values_1', json_str) # Async call
 
 
 
